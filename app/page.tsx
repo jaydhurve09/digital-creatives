@@ -1,12 +1,21 @@
 import Hero from "@/components/Hero";
-import Image from "next/image";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Projects from "@/components/Projects";
+import Team from "@/components/Team";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto overflow-hidden sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-        <Hero />
-      </div>
+    <main className="relative bg-black flex justify-center items-center flex-col mx-auto overflow-hidden pt-16">
+      <Hero />
+      <About />
+      <Services />
+      <Projects />
+      <Team />
+      <Contact />
+      <Footer />
     </main>
   );
 }
