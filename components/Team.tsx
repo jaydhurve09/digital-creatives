@@ -6,47 +6,47 @@ import Link from 'next/link';
 
 const teamMembers = [
   {
-    name: 'Jay Kumar',
-    role: 'Full Stack Developer',
-    image: '/team/dev1.jpg',
-    bio: 'Expert in Next.js and React development with 5+ years of experience.',
-    socialLinks: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com'
-    }
-  },
-  {
-    name: 'Sarah Wilson',
-    role: 'UI/UX Designer',
-    image: '/team/dev2.jpg',
+    name: 'Jay Dhurve',
+    role: 'Full Stack Developer, Graphic Designer',
+    image: '/team/Jay.jpg',
     bio: 'Creative designer specializing in user-centered design and modern interfaces.',
     socialLinks: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com'
+      github: 'https://github.com/jaydhurve09',
+      linkedin: 'https://linkedin.com/in/jay-dhurve-352586322',
+      twitter: 'https://x.com/jaydhurve09'
     }
   },
   {
-    name: 'Mike Chen',
-    role: 'Android Developer',
-    image: '/team/dev3.jpg',
+    name: 'Nayan Bhadane',
+    role: 'Android Developer, Database Engineer',
+    image: '/team/Nayan.jpg',
     bio: 'Mobile development expert with focus on native Android applications.',
     socialLinks: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com'
+      github: 'https://github.com/Nayanbhadane72',
+      linkedin: 'https://linkedin.com/in/nayan-bhadane-256240227',
+      twitter: 'https://x.com'
     }
   },
   {
-    name: 'Priya Sharma',
-    role: 'Graphic Designer',
+    name: 'Sankalp Ramteke',
+    role: 'Full Stack Developer, Video Edditor',
+    image: '/team/Sankalp.jpg',
+    bio: 'Expert in Next.js and React development',
+    socialLinks: {
+      github: 'https://github.com/sankalpramteke',
+      linkedin: 'https://linkedin.com/in/sankalp-ramteke-35a83224a',
+      twitter: 'https://x.com'
+    }
+  },
+  {
+    name: 'Shreyash Dalal',
+    role: 'Front End Developer',
     image: '/team/dev4.jpg',
     bio: 'Visual design specialist with expertise in branding and identity.',
     socialLinks: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      twitter: 'https://twitter.com'
+      github: 'https://github.com/D-ecode15',
+      linkedin: 'https://linkedin.com/in/shreyashd15',
+      twitter: 'https://x.com'
     }
   }
 ];

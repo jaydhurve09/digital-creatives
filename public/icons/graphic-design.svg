@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-</svg>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier"> <path d="M11.7935 10.7934L20.4603 3.45681C20.7653 3.19859 21.2173 3.21734 21.5 3.49992C21.7826 3.78253 21.8013 4.23461 21.5431 4.53966L14.2065 13.2064M11.7935 10.7934L9.58785 12.6605C8.7162 13.3984 8.66122 14.7236 9.46875 15.5311C10.2763 16.3386 11.6015 16.2837 12.3393 15.412L14.2065 13.2064M11.7935 10.7934L14.2065 13.2064M10.3398 17.75C10.3398 19.5449 8.88477 21 7.08984 21H2.5L2.7103 20.8948C3.74629 20.3768 4.26276 19.1914 3.93667 18.0799C3.87245 17.8611 3.83395 17.6334 3.85777 17.4066C4.02929 15.7731 5.41089 14.5 7.08984 14.5C8.88477 14.5 10.3398 15.955 10.3398 17.75Z" stroke="#ffffff" stroke-width="1.104" stroke-linecap="round" stroke-linejoin="round"/> </g>
+</svg>
