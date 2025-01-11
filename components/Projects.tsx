@@ -45,8 +45,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-gradient-to-b from-gray-900 to-black">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="w-full py-24 bg-gradient-to-b from-gray-900 to-black">
+      <div className="container mx-auto px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -72,7 +72,7 @@ export default function Projects() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-800 hover:border-gray-700 transition-all duration-300">
+              <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-800 hover:border-gray-700 transition-all duration-300 h-full flex flex-col">
                 <div className="relative h-64 overflow-hidden">
                   <Image
                     src={project.image}
@@ -88,15 +88,13 @@ export default function Projects() {
                   </div>
                 </div>
                 
-                <div className="p-6">
+                <div className="p-6 flex-1">
                   <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 mb-4">
-                    {project.description}
-                  </p>
+                  <p className="text-gray-400 mb-4 hidden md:block">{project.description}</p>
                   
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-4 hidden md:flex">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -107,7 +105,7 @@ export default function Projects() {
                     ))}
                   </div>
                   
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center mt-auto">
                     <Link
                       href={project.link}
                       className="text-blue-500 hover:text-blue-400 font-medium transition-colors"

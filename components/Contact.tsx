@@ -17,7 +17,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-20 bg-background">
+    <section id="contact" className="py-16 md:py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

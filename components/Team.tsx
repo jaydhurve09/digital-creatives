@@ -74,8 +74,8 @@ const SocialIcon = ({ platform }: { platform: string }) => {
 
 export default function Team() {
   return (
-    <section id="team" className="py-24 bg-gradient-to-b from-black to-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="team" className="w-full py-24 bg-gradient-to-b from-gray-900 to-black">
+      <div className="container mx-auto px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function Team() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
@@ -101,8 +101,8 @@ export default function Team() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-gray-900 to-gray-800 p-6 border border-gray-800 hover:border-gray-700 transition-all duration-300">
-                <div className="relative w-full aspect-square mb-6 overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-800 hover:border-gray-700 transition-all duration-300 h-full flex flex-col p-6">
+                <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-lg">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -117,7 +117,6 @@ export default function Team() {
                 <p className="text-gray-400 text-sm mb-6 line-clamp-2">
                   {member.bio}
                 </p>
-                
                 <div className="flex space-x-4 justify-center">
                   {Object.entries(member.socialLinks).map(([platform, url]) => (
                     <Link
@@ -126,7 +125,6 @@ export default function Team() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-blue-500 transition-colors"
-                      aria-label={`${member.name}'s ${platform}`}
                     >
                       <SocialIcon platform={platform} />
                     </Link>

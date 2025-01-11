@@ -23,7 +23,8 @@ export default function ServiceCard({ title, description, icon, delay = 0 }: Ser
           src={icon}
           alt={title}
           fill
-          className="object-contain"
+          className="object-contain text-white"
+          style={{ fill: 'white' }}
         />
       </div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
