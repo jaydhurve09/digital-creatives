@@ -27,7 +27,7 @@ export default function Contact() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Get in Touch</h2>
           <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Have a project in mind? We&#39;d love to hear about it. Send us a message and we'll get back to you as soon as possible.
+            Have a project in mind? We&apos;d love to hear about it. Send us a message and we&apos;ll get back to you as soon as possible.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
