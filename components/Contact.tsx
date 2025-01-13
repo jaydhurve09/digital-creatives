@@ -33,7 +33,7 @@ export default function Contact() {
           <form
             name="contact"
             method="POST"
-            action="https://your-netlify-site.netlify.app/"
+            action="https://digitpioneers.netlify.app/"
             data-netlify="true"
             onSubmit={handleSubmit}
           >
