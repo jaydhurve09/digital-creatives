@@ -63,11 +63,18 @@ export default function Navbar() {
             </Link>
           </motion.div>
 
+          {/* Mobile Menu Toggle Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded focus:outline-none"
+          >
+            {isOpen ? 'Close' : 'Menu'}
+          </button>
+
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-1">
             {navItems.map((item, index) => {
               const isActive = pathname === item.path;
-              
               return (
                 <motion.li
                   key={item.path}
@@ -79,78 +86,40 @@ export default function Navbar() {
                     onClick={() => scrollToSection(item.path)}
                     className={`relative px-4 py-2 rounded-full transition-all duration-300 ${
                       isActive 
-                        ? 'text-primary' 
-                        : 'text-muted-foreground hover:text-primary'
+                        ? 'bg-blue-500 text-white'
+                        : 'text-gray-800'
                     }`}
                   >
-                    <span className="relative z-10">{item.name}</span>
-                    {isActive && (
-                      <motion.div
-                        layoutId="navbar-active"
-                        className="absolute inset-0 bg-primary/10 rounded-full"
-                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                      />
-                    )}
+                    {item.name}
                   </button>
                 </motion.li>
               );
             })}
           </ul>
 
-          {/* Mobile Menu Button */}
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative w-10 h-10 rounded-full hover:bg-primary/10 transition-colors"
-            aria-label="Toggle menu"
-          >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-4 flex flex-col justify-between">
-              <span className={`w-full h-0.5 bg-foreground rounded-full transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-              <span className={`w-full h-0.5 bg-foreground rounded-full transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-              <span className={`w-full h-0.5 bg-foreground rounded-full transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
-            </div>
-          </motion.button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden bg-background/50 backdrop-blur-lg rounded-2xl mt-2 border border-border"
-            >
-              <ul className="p-2 space-y-1">
-                {navItems.map((item, index) => {
-                  const isActive = pathname === item.path;
-                  
-                  return (
-                    <motion.li
-                      key={item.path}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
+          {/* Mobile Menu */}
+          <AnimatePresence>
+            {isOpen && (
+              <ul className="md:hidden flex flex-col space-y-1">
+                {navItems.map((item, index) => (
+                  <motion.li
+                    key={item.path}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <button
+                      onClick={() => scrollToSection(item.path)}
+                      className="px-4 py-2 rounded-full text-gray-800"
                     >
-                      <button
-                        onClick={() => scrollToSection(item.path)}
-                        className={`w-full px-4 py-2 rounded-lg transition-all duration-300 text-left ${
-                          isActive 
-                            ? 'bg-primary/10 text-primary' 
-                            : 'hover:bg-primary/5 text-muted-foreground hover:text-primary'
-                        }`}
-                      >
-                        {item.name}
-                      </button>
-                    </motion.li>
-                  );
-                })}
+                      {item.name}
+                    </button>
+                  </motion.li>
+                ))}
               </ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            )}
+          </AnimatePresence>
+        </div>
       </nav>
     </motion.header>
   );
