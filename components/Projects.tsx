@@ -62,7 +62,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -70,7 +70,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`group ${index === 0 ? 'mobileCard' : 'card'}`}
+              className="group"
             >
               <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-gray-900 to-gray-800 border border-gray-800 hover:border-gray-700 transition-all duration-300 h-full flex flex-col">
                 <div className="relative h-64 overflow-hidden">
