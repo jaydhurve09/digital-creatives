@@ -43,6 +43,26 @@ const projects = [
   }
 ];
 
+const styles = {
+  card: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  mobileCard: {
+    display: 'none',
+  },
+  mobileView: {
+    '@media (max-width: 768px)': {
+      mobileCard: {
+        display: 'block',
+      },
+      card: {
+        display: 'none',
+      },
+    },
+  },
+};
+
 export default function Projects() {
   return (
     <section id="projects" className="w-full py-24 bg-gradient-to-b from-gray-900 to-black">
